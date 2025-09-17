@@ -21,15 +21,17 @@
             <%= getFlashMessages('success')[0] %>
           </div>
           <% } %>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" autocomplete="off">
-            <label for="email">Email address</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="password" name="password" placeholder="password" autocomplete="off">
-            <label for="password">Password</label>
-          </div>
-          <button class="btn btn-primary w-100">Login</button>
+          <form action="/login" method="post">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" autocomplete="off">
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="password" name="password" placeholder="password" autocomplete="off">
+              <label for="password">Password</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
         </div>
         <div class="card-footer">
           Belum punya akun ? <a href="register">Register</a>

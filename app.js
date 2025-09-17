@@ -29,7 +29,7 @@ app.use(session({
     cookie: {
         // 'true' memastikan cookie hanya dikirim melalui koneksi HTTPS.
         // Sangat penting untuk keamanan di lingkungan produksi.
-        secure: true,
+        secure: false,
 
         // 'true' mencegah cookie diakses oleh JavaScript di sisi klien (misalnya, document.cookie).
         // Ini adalah pertahanan penting terhadap serangan Cross-Site Scripting (XSS).
