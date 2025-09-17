@@ -9,7 +9,10 @@
 </head>
 
 <body>
-  <h1>Books</h1>
+  <div>
+    <h1>Books</h1>
+    <a href="/book/create">Create New Book</a>
+  </div>
   <div class="container">
     <% books.forEach(book => { %>
     <div class="row">
@@ -21,10 +24,13 @@
           Judul : <%= book?.title %>
         </div>
         <div>
-          Penulis : <%= book?.penulis %>
+          Penulis : <%= book?.author %>
         </div>
         <div>
-          <a href="/book/<%= book.id %>" class="btn btn-danger">Hapus</a>
+          <form method="post" action="/book/<%= book?.id %>?_method=DELETE">
+            <button type="submit" class="btn btn-danger">Hapus</button>
+          </form>
+          <a href="/book/<%= book?.id %>/update" class="btn btn-warning">Edit</a>
         </div>
       </div>
     </div>
